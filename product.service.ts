@@ -12,7 +12,8 @@ export class ProductService {
   {
     return[
       new Product('Tomato', 25, 10, 'https://bit.ly/320pkNh'),
-      new Product('Pineapple', 125, 0, 'https://bit.ly/2TRP1Lf')
+      new Product('Pineapple', 125, 5, 'https://bit.ly/2TRP1Lf'),
+      new Product('Kiwi', 50, 2, 'https://bit.ly/2HRoVFE')
     ]
   }
 }
