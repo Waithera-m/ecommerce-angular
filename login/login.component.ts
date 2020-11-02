@@ -11,7 +11,6 @@ import { AuthenticationService } from '../authentication.service';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-
   loginForm: FormGroup;
   loading = false;
   submitted = false;
@@ -39,7 +38,7 @@ export class LoginComponent implements OnInit {
     this.loading = true;
     this.authenticationService.login(this.email.value, this.dashboard_id.value, this.password.value).subscribe(data => {
         if (this.authenticationService.isLoggedIn) {
-          const redirect = this.authenticationService.redirectUrl ? this.authenticationService.redirectUrl : '/';
+          const redirect = this.authenticationService.redirectUrl ? this.authenticationService.redirectUrl : '';
           this.router.navigate([redirect]);
         } else {
           this.loginError = 'Username or password is incorrect.';
@@ -48,6 +47,4 @@ export class LoginComponent implements OnInit {
       error => this.error = error
     );
   }
-  
-
 }
