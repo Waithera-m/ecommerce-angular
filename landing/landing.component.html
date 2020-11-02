@@ -1,0 +1,22 @@
+<div class="jumbotron jumbotron-fluid shadow">
+    <h2 class="display-5 text-center">This Market</h2>
+</div>
+<div class="container">
+    <div *ngFor='let product of products'>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card mb-2">
+                    <div class="card-img-top">
+                        <img class="img-fluid" src="{{product.image}}">
+                    </div>
+                    <div class="card-body">
+                        <p>{{product.name}}</p>
+                        <p>{{product.cost}}</p>
+                        <p>{{product.discount}}%</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</div>
